@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ['www.vitable.com.au', 'ehon-inc.jp', 'www.buildxo.shop'],
+  },
 };
 
 export default nextConfig;
