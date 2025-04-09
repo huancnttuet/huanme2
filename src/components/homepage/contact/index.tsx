@@ -17,8 +17,8 @@ export default function Contact() {
 
     sendEmail({
       name,
-      email,
-      subject: 'New message from contact form',
+      email: 'huancnttuet@gmail.com',
+      subject: 'New message from contact form ',
       content: message,
     }).then((res) => {
       if (res.success) {
