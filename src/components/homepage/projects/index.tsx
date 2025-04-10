@@ -55,18 +55,18 @@ const projects = [
   },
   {
     id: 3,
-    title: 'BuildXO',
+    title: 'Build with XO',
     description:
-      'BuildXO is a personal e-commerce project focused on selling 3D model, designed to showcase modern frontend and backend technologies',
-    fullDescription: `BuildXO is a personal e-commerce project focused on selling 3D model, designed to showcase modern frontend and backend technologies. I developed the platform using NextJS with server-side rendering and optimized performance through Vercel deployment. The project features a fully responsive UI built with TailwindCSS and the Shadcn component library. Zustand was used for lightweight global state management, and MongoDB handled dynamic product data storage. The site includes a modern shopping experience with cart functionality, product detail pages, and admin controls for managing listings.`,
+      'Build with XO is a personal e-commerce project focused on selling 3D model, designed to showcase modern frontend and backend technologies',
+    fullDescription: `Build with XO is a personal e-commerce project focused on selling 3D model, designed to showcase modern frontend and backend technologies. I developed the platform using NextJS with server-side rendering and optimized performance through Vercel deployment. The project features a fully responsive UI built with TailwindCSS and the Shadcn component library. Zustand was used for lightweight global state management, and MongoDB handled dynamic product data storage. The site includes a modern shopping experience with cart functionality, product detail pages, and admin controls for managing listings.`,
     image: '/assets/images/projects/buildxo.jpg',
     techlogies: ['NextJS', 'ReactJS', 'MongoDB', 'Vercel'],
     metadata: {
-      title: 'BuildXO',
-      description: 'BuildXO | Personal E-commerce Project',
+      title: 'Build with XO',
+      description: 'Build with XO | Personal E-commerce Project',
       image: '/assets/images/projects/buildxo.jpg',
-      favicon: 'https://www.buildxo.shop/favicon.ico',
-      url: 'https://www.buildxo.shop/',
+      favicon: 'https://www.buildwithxo.com/favicon.ico',
+      url: 'https://www.buildwithxo.com/',
     },
   },
 ];
@@ -82,7 +82,6 @@ export default function Projects() {
         <h2 className='text-3xl font-bold'>
           <span className='text-[#8b5cf6]'>#</span>projects
         </h2>
-
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
         {projects.map((project) => (
