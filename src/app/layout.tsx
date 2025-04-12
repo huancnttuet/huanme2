@@ -7,6 +7,7 @@ import { fontMono, fontSans } from '@/lib/font';
 import { ThemeProvider } from '@/providers/theme';
 import Header from '@/layouts/header';
 import Footer from '@/layouts/footer';
+import Spinner from '@/components/ui/spinner';
 
 export const metadata: Metadata = {
   title: {
@@ -105,6 +106,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 className='border-grid flex flex-1 flex-col'>
                 <Header />
                 <main className='flex flex-1 flex-col'>{children}</main>
+
+                <Spinner />
 
                 <Footer />
               </div>

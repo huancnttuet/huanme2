@@ -3,17 +3,20 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { sendEmail } from '@/lib/email';
+import useCommon from '@/store/common';
 
 export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isSent, setIsSent] = useState(false);
+  const { setIsLoading } = useCommon((state) => state);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log({ name, email, message });
+
+    setIsLoading(true);
 
     sendEmail({
       name,
@@ -28,6 +31,7 @@ export default function Contact() {
       }
 
       setIsSent(true);
+      setIsLoading(false);
     });
   };
 
