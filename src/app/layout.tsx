@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
   keywords: [
+    'huanme',
+    'huanme.me',
+    'huaanme',
+    'huanpl',
+    'Phan Luong Huan',
     'Next.js',
     'React',
     'Tailwind CSS',
