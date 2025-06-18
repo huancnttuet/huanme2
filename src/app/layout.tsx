@@ -8,6 +8,8 @@ import { ThemeProvider } from '@/providers/theme';
 import Header from '@/layouts/header';
 import Footer from '@/layouts/footer';
 import Spinner from '@/components/ui/spinner';
+import { Toaster } from '@/components/ui/sonner';
+import Providers from '@/providers/react-query';
 
 export const metadata: Metadata = {
   title: {
@@ -77,9 +79,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <html
-        lang='en'
-        suppressHydrationWarning>
+      <html lang='en' suppressHydrationWarning>
         <head>
           <script
             dangerouslySetInnerHTML={{
@@ -98,28 +98,33 @@ export default function RootLayout({ children }: RootLayoutProps) {
             'min-h-svh bg-background font-sans antialiased',
             fontSans.variable,
             fontMono.variable,
-          )}>
-          <ThemeProvider
-            attribute='class'
-            defaultTheme='system'
-            enableSystem
-            disableTransitionOnChange
-            enableColorScheme>
-            <div className='relative flex min-h-svh flex-col bg-background '>
-              <div
-                data-wrapper=''
-                className='border-grid flex flex-1 flex-col'>
-                <Header />
-                <main className='flex flex-1 flex-col'>{children}</main>
+          )}
+        >
+          <Providers>
+            <ThemeProvider
+              attribute='class'
+              defaultTheme='system'
+              enableSystem
+              disableTransitionOnChange
+              enableColorScheme
+            >
+              <div className='relative flex min-h-svh flex-col bg-background '>
+                <div
+                  data-wrapper=''
+                  className='border-grid flex flex-1 flex-col'
+                >
+                  <Header />
+                  <main className='flex flex-1 flex-col'>{children}</main>
 
-                <Spinner />
+                  <Spinner />
 
-                <Footer />
+                  <Footer />
+                </div>
               </div>
-            </div>
 
-            {/* <ThemeSwitcher /> */}
-          </ThemeProvider>
+              <Toaster position='top-center' richColors />
+            </ThemeProvider>
+          </Providers>
         </body>
       </html>
     </>

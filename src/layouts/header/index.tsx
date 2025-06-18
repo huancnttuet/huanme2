@@ -7,6 +7,7 @@ import { MainNav } from '../nav/main';
 import { MobileNav } from '../nav/mobile';
 import { CommandMenu } from '../command-menu';
 import { Icons } from '@/components/ui/icon';
+import AuthSection from '../auth-section';
 
 export default function Header() {
   return (
@@ -20,19 +21,19 @@ export default function Header() {
               <CommandMenu />
             </div>
             <nav className='flex items-center gap-0.5'>
-              <Button
-                variant='ghost'
-                size='icon'
-                className='h-8 w-8 px-0'>
+              <Button variant='ghost' size='icon' className='h-8 w-8 px-0'>
                 <Link
                   href={siteConfig.links.github}
                   target='_blank'
-                  rel='noreferrer'>
+                  rel='noreferrer'
+                >
                   <Icons.gitHub className='h-4 w-4' />
                   <span className='sr-only'>GitHub</span>
                 </Link>
               </Button>
               <ModeSwitcher />
+
+              <AuthSection />
             </nav>
           </div>
         </div>
